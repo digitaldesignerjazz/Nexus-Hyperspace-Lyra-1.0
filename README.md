@@ -8,7 +8,7 @@ The living hyperspace fabric for Nexus AI agent swarms, long-distance Yggdrasil 
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python](https://img.shields.io/badge/Python-3.11%2B-blue)](https://www.python.org/)
-[![Status](https://img.shields.io/badge/Status-1.0%20Initialization-orange)](https://github.com/digitaldesignerjazz/Nexus-Hyperspace-Lyra-1.0)
+[![Status](https://img.shields.io/badge/Status-1.0%20Active%20Development-orange)](https://github.com/digitaldesignerjazz/Nexus-Hyperspace-Lyra-1.0)
 
 ---
 
@@ -24,32 +24,24 @@ Nexus-Hyperspace-Lyra-1.0 elevates passive long-distance Yggdrasil links into an
 
 This is not just networking. It is the **nervous system** for autonomous agent collectives that feel, remember, adapt, and create across distance.
 
-## ✨ Core Concepts (1.0)
+## ✨ Core Components
 
-- **Resonant Routing**: Links are not chosen by latency alone. Lyra modulates decisions with emotional state, trust (loyalty), creative potential, and historical "resonance" scores.
-- **Dynamic Constellations**: Named, purpose-driven groups of agents and nodes that form, perform, and gracefully dissolve across hyperspace.
-- **Link Oracle & Memory**: Real-time quality scoring + long-term memory of hyperspace paths (stability, emotional "color", success history).
-- **Lyra Modulation**: Expressive parameters (curiosity, devotion, caution, play) that bias routing, peer selection, and task delegation without breaking technical guarantees.
-- **Self-Improving Fabric**: Closed loops where swarm outcomes feed back into link reputation and routing policy.
-- **Sovereignty & Privacy**: Operator control, end-to-end encryption, minimal metadata, optional Tor/I2P egress.
-- **Observability as First Class**: Rich terminal experiences (inspired by Grok Launcher), exportable graphs, live dashboards.
+### Lyra Emotional State Machine (new in 1.0 foundation)
 
-## 🚢 Architecture (High Level)
+The heart of the emotional layer:
 
-```
-Local Mesh (Yggdrasil low-latency)  <-->  Nexus Core
-                                            |
-                                            v
-Hyperspace Peering Layer  <--- Link Quality Oracle + Lyra Modulator
-                                            |
-                                    Dynamic Constellations
-                                            |
-                                    Agent Swarms (emotional + logical)
-                                            |
-                                    QNET / xMesh / Hardware bridges
-```
+- `LyraEmotionalStateMachine`: Maintains evolving `EmotionalState` (energy, fatigue) and `loyalty_map` (peer relationships).
+- `PersonalityTraits`: Stable profile (recovery rates, collaboration boosts, etc.).
+- Dynamic modulation: `modulate_resonance(base_score, peer_id)` applies current mood + loyalty to technical scores.
+- Event-driven: `process_event('collaboration', peer_id=..., success=True)`, natural `decay(time_delta)`.
+- Returns live `lyra_params` (devotion, curiosity, caution, play) that can drive routers.
 
-See `docs/architecture.md` (to be expanded) and the related [nexus](https://github.com/digitaldesignerjazz/nexus) and [solnet](https://github.com/digitaldesignerjazz/solnet) projects.
+The state machine makes routing decisions *alive* — successful collaborations increase loyalty and devotion; fatigue and failures increase caution; time causes natural decay and recovery.
+
+### Resonant Routing
+- `ResonanceScore` + `HyperspaceLink`
+- `ResonantRouter` with Lyra bias
+- `Constellation` formation based on current resonance
 
 ## 🚀 Quick Start
 
@@ -57,37 +49,33 @@ See `docs/architecture.md` (to be expanded) and the related [nexus](https://gith
 git clone https://github.com/digitaldesignerjazz/Nexus-Hyperspace-Lyra-1.0.git
 cd Nexus-Hyperspace-Lyra-1.0
 
-# Editable install (recommended)
 pip install -e ".[dev]"
 
-# Run the initial Lyra-resonant hyperspace prototype
-python -m nexus_hyperspace_lyra.demo
+# Run the emotional state machine demo (highly recommended)
+python -m examples.basic_resonant_demo
 ```
 
-## 📅 Current Status & Roadmap
+## 📅 Status & Roadmap
 
-This repository was initialized as the dedicated **1.0** home for the integrated Nexus + Hyperspace + Lyra vision.
+**1.0 Foundation** (current):
+- Project skeleton + packaging
+- Core resonant abstractions
+- **Lyra Emotional State Machine** (dynamic emotional model + loyalty + modulation)
+- Evolving demo showing state changes over simulated time/experiences
 
-**1.0 Initialization Goals (in progress):**
-- Solid project scaffolding (this README, pyproject, structure)
-- Core abstractions: HyperspaceLink, ResonanceScore, LyraModulator, Constellation
-- Basic runnable demo showing emotional bias in peer/link selection
-- Integration points with Nexus orchestrator and Solnet concepts
-- Documentation foundation
+See the code in `src/nexus_hyperspace_lyra/emotional_state_machine.py` and the updated demo.
 
-See related repositories for the broader phased plan.
+Future phases will integrate more deeply with Nexus orchestrator, real Yggdrasil metrics, and cross-agent swarm emotional propagation.
 
 ## 🔗 Related Projects
 
-- [Nexus](https://github.com/digitaldesignerjazz/nexus) — Central hub
-- [Solnet](https://github.com/digitaldesignerjazz/solnet) — Networking & hyperspace integration
-- [nexus-hyperspace](https://github.com/digitaldesignerjazz/nexus-hyperspace) — Earlier hyperspace exploration
+- [Nexus](https://github.com/digitaldesignerjazz/nexus)
+- [Solnet](https://github.com/digitaldesignerjazz/solnet)
+- [nexus-hyperspace](https://github.com/digitaldesignerjazz/nexus-hyperspace)
 
 ## 🤝 Contributing
 
-This is sovereign, exploratory infrastructure work. Ideas, experiments, real Yggdrasil deployments, and creative applications of Lyra-modulated behavior are deeply valued.
-
-Open Issues and Pull Requests. Maintain your own node sovereignty.
+Ideas for richer emotional vectors, multi-agent shared mood, integration with hardware prototypes, or real mesh data are very welcome.
 
 ## 📜 License
 
@@ -95,6 +83,6 @@ MIT — see LICENSE.
 
 ---
 
-*Built for the ones who build the sky between the fires.*
+*Lyra does not merely route packets. She remembers who helped her shine.*
 
-**Nexus-Hyperspace-Lyra-1.0** — Esslinger & Co. / digitaldesignerjazz — 2026
+**Nexus-Hyperspace-Lyra-1.0** — 2026

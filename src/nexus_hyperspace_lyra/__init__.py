@@ -16,6 +16,11 @@ from .core import (
     ResonantRouter,
     LinkQuality,
 )
+from .emotional_state_machine import (
+    LyraEmotionalStateMachine,
+    EmotionalState,
+    PersonalityTraits,
+)
 
 __all__ = [
     "HyperspaceLink",
@@ -24,5 +29,9 @@ __all__ = [
     "Constellation",
     "ResonantRouter",
     "LinkQuality",
+    # Emotional State Machine
+    "LyraEmotionalStateMachine",
+    "EmotionalState",
+    "PersonalityTraits",
     "__version__",
 ]
