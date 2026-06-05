@@ -25,6 +25,7 @@ class PersonalityTraits:
     energy_baseline: float = 0.80
     fatigue_rate: float = 0.12
     recovery_rate: float = 0.09
+    loyalty_base: float = 0.5
     loyalty_decay: float = 0.02
     collaboration_boost: float = 0.12
     failure_penalty: float = 0.18
