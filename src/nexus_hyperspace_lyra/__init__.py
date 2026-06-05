@@ -14,6 +14,7 @@ from .core import (
     LyraModulator,
     Constellation,
     ResonantRouter,
+    LinkQuality,
 )
 
 __all__ = [
@@ -22,5 +23,6 @@ __all__ = [
     "LyraModulator",
     "Constellation",
     "ResonantRouter",
+    "LinkQuality",
     "__version__",
 ]
