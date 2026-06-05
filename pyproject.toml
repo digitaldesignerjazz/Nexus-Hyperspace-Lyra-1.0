@@ -9,7 +9,7 @@ description = "Nexus-Hyperspace-Lyra-1.0 — Decentralized, intelligent, resonan
 readme = "README.md"
 license = { text = "MIT" }
 authors = [
-    { name = "Sven Normen Esslinger / Esslinger & Co.", email = "via GitHub" }
+    { name = "Sven Normen Esslinger / Esslinger & Co." }
 ]
 requires-python = ">=3.11"
 keywords = [
