@@ -79,7 +79,8 @@ async def main():
 
         # Show modulated scores for a few links
         modulated = {}
-        for pid, _ in peers[:3]:
+        for p in peers[:3]:
+            pid = p[0]
             base = router.score_link(pid) if pid in router.links else 0.5
             mod = lyra_sm.modulate_resonance(base, peer_id=pid)
             modulated[pid] = round(mod, 3)
